@@ -5,5 +5,10 @@ interface StyledInputProps {
 }
 
 export const StyledInput = styled("input")<StyledInputProps>`
-  color: ${({ isTyping = false }) => (isTyping ? "red" : "blue")};
+  color: ${({
+    isTyping = false,
+    theme: {
+      colors: { main, secondary },
+    },
+  }) => (isTyping ? main : secondary)};
 `;

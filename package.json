@@ -9,13 +9,15 @@
   "scripts": {
     "clean": "rimraf -rf **/*/dist",
     "start": "concurrently -n w: \"npm:start:*\"",
-    "build": "yarn build:design-system && yarn build:application && yarn build:server",
+    "build": "yarn build:theme && yarn build:design-system && yarn build:application && yarn build:server",
     "start:application": "yarn workspace @template-barista/application watch",
     "start:design-system": "yarn workspace @template-barista/design-system watch",
     "start:server": "yarn workspace @template-barista/server start",
+    "start:theme": "yarn workspace @template-barista/theme watch",
     "build:application": "yarn workspace @template-barista/application build",
     "build:design-system": "yarn workspace @template-barista/design-system build",
-    "build:server": "yarn workspace @template-barista/server build"
+    "build:server": "yarn workspace @template-barista/server build",
+    "build:theme": "yarn workspace @template-barista/theme build"
   },
   "devDependencies": {
     "concurrently": "^7.0.0",

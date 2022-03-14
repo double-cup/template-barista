@@ -5,6 +5,8 @@ const commonConfig = {
   mode: 'development',
   entry: resolve(__dirname, 'src', 'index.tsx'),
   output: {
+    filename: '[contenthash].bundle.js',
+    chunkFilename: '[contenthash].bundle.js',
     path: resolve(__dirname, 'dist'),
   },
   module: {
@@ -21,7 +23,10 @@ const commonConfig = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: resolve(__dirname, 'src', 'assets', 'html', 'index.html'),
+      template: resolve(__dirname, 'src', 'assets', 'html', 'generated.html'),
+      inject: 'body',
+      minify: true,
+      xhtml: true,
     }),
   ],
   watchOptions: {
