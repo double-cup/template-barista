@@ -1,0 +1,32 @@
+{
+  "name": "@template-barista/application",
+  "version": "0.0.1",
+  "author": "Julien Andreu<julienandreu@me.com>",
+  "description": "Template barista application",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/double-cup/template-barista.git",
+    "directory": "packages/application"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@template-barista/design-system": "workspace:^",
+    "react": "^17.0.2",
+    "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.40",
+    "@types/react-dom": "^17.0.13",
+    "@types/styled-components": "^5.1.24",
+    "react-dom": "^17.0.2",
+    "react-is": "^17.0.2",
+    "typescript": "^4.6.2"
+  },
+  "scripts": {
+    "watch": "tsc --watch",
+    "build": "tsc"
+  }
+}
