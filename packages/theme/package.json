@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "author": "Julien Andreu<julienandreu@me.com>",
   "description": "Template barista theme",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "types": "dist/index.d.ts",
   "keywords": [],
   "repository": {
@@ -13,7 +13,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "react": "^17.0.2",
+    "react": "latest",
     "react-dom": "^17.0.2",
     "react-is": "^17.0.2",
     "styled-components": "^5.3.3"

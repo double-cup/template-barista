@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "author": "Julien Andreu<julienandreu@me.com>",
   "description": "Template barista server",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "types": "dist/index.d.ts",
   "keywords": [],
   "repository": {
@@ -14,7 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "@template-barista/application": "workspace:^",
-    "react": "^17.0.2",
+    "react": "latest",
     "react-dom": "^17.0.2",
     "react-is": "^17.0.2",
     "styled-components": "^5.3.3",
@@ -42,5 +42,8 @@
     "start": "webpack serve --port 3000",
     "build": "webpack",
     "analyze": "webpack --profile --json > webpack.stats.json && webpack-bundle-analyzer webpack.stats.json"
+  },
+  "browser": {
+    "@template-barista/design-system": false
   }
 }

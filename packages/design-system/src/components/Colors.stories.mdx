@@ -1,0 +1,62 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+
+import { colors, gradients } from "../config/theme";
+
+<Meta title="Colors" />
+
+# Colors
+
+<ColorPalette>
+  <ColorItem
+    title="Primary"
+    subtitle="colors.primary"
+    colors={colors.primary}
+  />
+  <ColorItem
+    title="Secondary"
+    subtitle="colors.secondary"
+    colors={colors.secondary}
+  />
+  <ColorItem
+    title="Complementary"
+    subtitle="colors.complementary"
+    colors={colors.complementary}
+  />
+  <ColorItem
+    title="Recognition"
+    subtitle="colors.recognition"
+    colors={colors.recognition}
+  />
+  <ColorItem title="Admin" subtitle="colors.admin" colors={colors.admin} />
+  <ColorItem title="States" subtitle="colors.states" colors={colors.states} />
+</ColorPalette>
+
+# Gradients
+
+<ColorPalette>
+  <ColorItem
+    title="Blue Light"
+    subtitle="gradients.blue.light"
+    colors={[gradients.blue.light]}
+  />
+  <ColorItem
+    title="Blue Dark"
+    subtitle="gradients.blue.dark"
+    colors={[gradients.blue.dark]}
+  />
+  <ColorItem
+    title="Orange Light"
+    subtitle="gradients.orange.light"
+    colors={[gradients.orange.light]}
+  />
+  <ColorItem
+    title="Orange Dark"
+    subtitle="gradients.orange.dark"
+    colors={[gradients.orange.dark]}
+  />
+  <ColorItem
+    title="Orange Dark - Reverse"
+    subtitle="gradients.orange.darkReverse"
+    colors={[gradients.orange.darkReverse]}
+  />
+</ColorPalette>

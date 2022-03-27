@@ -1,25 +1,27 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
     "module": "esnext",
     "moduleResolution": "node",
-    "isolatedModules": true,
-    "resolveJsonModule": true,
-    "noEmit": true,
-    "jsx": "react",
+    "lib": ["dom", "esnext"],
+    "strict": true,
     "sourceMap": true,
+    "target": "esnext",
+    "outDir": "dist",
     "declaration": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "incremental": true,
-    "noFallthroughCasesInSwitch": true
+    "declarationMap": true,
+    "types": ["node", "react"],
+    "paths": {
+      "@template-barista/application": ["./packages/application/src"],
+      "@template-barista/application/*": ["./packages/application/src/*"],
+      "@template-barista/design-system": ["./packages/design-system/src"],
+      "@template-barista/design-system/*": ["./packages/design-system/src/*"],
+      "@template-barista/server": ["./packages/server/src"],
+      "@template-barista/server/*": ["./packages/server/src/*"],
+      "@template-barista/theme": ["./packages/theme/src"],
+      "@template-barista/theme/*": ["./packages/theme/src/*"]
+    }
   },
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules"]
 }

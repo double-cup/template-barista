@@ -1,9 +1,14 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDebouncedCallback } from "use-debounce";
-import { StyledInput } from "../styles/Input.styled";
+import StyledInput from "../../styles/Input";
 
-export function Input() {
-  const [value, setValue] = useState<string>("");
+interface InputProps {
+  backgroundColor?: string;
+  initialValue?: string;
+}
+
+function Input({ initialValue = "", backgroundColor }: InputProps) {
+  const [value, setValue] = useState<string>(initialValue);
   const [isTyping, setIsTyping] = useState<boolean>(false);
 
   const debouncedCancelIsTyping = useDebouncedCallback(() => {
@@ -17,6 +22,7 @@ export function Input() {
 
   return (
     <StyledInput
+      backgroundColor={backgroundColor}
       isTyping={isTyping}
       type="text"
       value={value}
@@ -24,3 +30,5 @@ export function Input() {
     />
   );
 }
+
+export default Input;

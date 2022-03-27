@@ -1,17 +1,7 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
-    "jsx": "react",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "lib": ["dom", "esnext"],
-    "strict": true,
-    "sourceMap": true,
-    "target": "esnext",
-    "outDir": "dist",
-    "declaration": true,
-    "declarationMap": true
+    "outDir": "dist"
   },
-  "include": ["./src/**/*.ts"],
-  "exclude": ["node_modules"]
+  "extends": "../../tsconfig.react",
+  "include": ["./src/**/*.ts", "./src/**/*.tsx"]
 }
